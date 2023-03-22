@@ -1,0 +1,36 @@
+simple:
+    Scoatem fiecare caracter, adaugam step-ul si daca rezultatul este peste 90
+    atunci scadem 26 pentru a intoarce rezultatul in limita alfabetului
+
+points-distance:
+    Am scos mai intai elemenul x din structuri. Daca sunt egale, inseamna ca 
+    este paralel cu axa OX si scot elementele y. Cand am elementele corecte
+    le schimb cu locul in asa fel incat sa scad elementul mai mic din cel mai mare
+    si sa am rezultat pozitiv. Apoi pun rezultatul la pointer
+
+road:
+    aceeasi implementare ca la points-distance, doar ca lucreaza in loop
+    si face n-1 pasi cu cate 2 elemente (i si i + 1)
+
+is_square:
+    am "implementat" codul C din comentariu. Nu l-am scos din vreun generator de
+    cod, ci l-am scris manual in asa fel ca sa aiba functionalitate identica. Am 
+    facut un for loop care gaseste daca numarul este patrat perfect sau nu. Apoi 
+    am stocat rezultatul in vector. Am tratat aparte cazul pentru 0. Efectiv daca
+    un numar este patrat perfect, el se divide fara rest cu orice i de la 1 
+    atata timp cat i^2 <= n.
+
+beaufort:
+    nu am folosit tabela data ca parametru. Am calculat un offset egal cu
+    26 - coloana pt care corespunde caracterul. Apoi la acest offset am adaugat
+    randul de baza, ca si cum ne-am afla in prima coloana. Astfel prin formula asta
+    gasita experimental primim un offset in dependenta de ce coloana suntem, deoarece
+    fiecare coloana are alfabetul de la A la Z doar ca e facuta o rotatie. Dupa operatiile
+    precedente am adus acel offset la valoare mai mica de 26 si am calculat caracterul ascii,
+    pe care l-am pus in vectorul rezultant.
+
+spiral:
+    am folosit variabile in data section. Am stocat directia in care mergem prin
+    matrice. Scoteam din matrice elementul cu offsetul y * n + x si mergeam
+    mai departe in directia dorita. Cand ajungem la o margine (high sau low)
+    schimbam directia. Programul termina cand ajunge la null terminator.
